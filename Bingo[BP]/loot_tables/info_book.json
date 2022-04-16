@@ -1,0 +1,30 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:written_book",
+                    "functions": [
+                        {
+                            "function": "set_book_contents",
+                            "author": "§9FondUnicycle",
+                            "title": "User Manual",
+                            "pages": [
+                                "",
+                                "\n\n\n\n         §l§2BEDROCK§r\n           §l§2BINGO§r\n\n\n           §oMade by§r\n      §l§9FondUnicycle§r",
+                                "       §l§2Game Modes§r\n\nThere are 2 modes to play:\n\n-§lLine Mode§r: classic BINGO, just one line to win (horizontal, vertical, or diagonal). Type §c$mode line§r in chat to set this game mode.",
+                                "\n\n-§lBlackout Mode§r: you will need to fill the whole card to win. Type §c$mode blackout§r in chat to set this game mode.\n\nIf no mode is selected when starting the game, §lLine Mode§r will be the default mode.",
+                                "       §l§2Bingo Card§r\n\n-Every player gets a Bingo Card item when joining the world. This item can't be dropped nor lost on death.\n\n-Before the game starts, §lusing§r the item creates a new card. Repeat this until you are happy with it.",
+                                "\n\nOnce the game has started, you won't be able to change it, so choose wisely.\n\n\n-After the game has started, §lusing§r the item let you hide or show your card from the screen.",
+                                "            §l§2Game§r\n\n-To start the game, type §c$startgame§r in chat. All players will get spread out around the world.\n\n-Everytime you get an item that is in your card, it will be marked out, and the item will be taken from your inventory.",
+                                "\n\n§o§7(TIP: if you are quick enough, you might be able to equip armor without loosing it towards your card.)§r\n\n-Once someone gets Bingo, the game will alert everyone that there is a winner, and will teleport everyone back to spawn."
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
