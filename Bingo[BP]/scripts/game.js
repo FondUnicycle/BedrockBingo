@@ -4,7 +4,7 @@ import { emoji_ids, cardMarker } from './emoji_ids.js';
 
 
 const playerInvSize = 36;
-const ticksPerRun = 5;
+const ticksPerRun = 3;
 const overworld = world.getDimension('overworld');
 
 let spawnLoc;
@@ -93,7 +93,6 @@ function checkInvs() {
 }
 
 export function setUpGame(mode, location) {
-    /** GIVE EACH PLAYER A NEW GENERATED CARD */
     gameMode = mode;
     spawnLoc = location;
     overworld.runCommand(`say Spawn set to ( ${Math.floor(spawnLoc.x)}, ${Math.floor(spawnLoc.y)}, ${Math.floor(spawnLoc.z)} )`)
