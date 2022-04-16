@@ -1,0 +1,65 @@
+{
+    "hud_actionbar_text": {
+        "ignored": "((($actionbar_text > '§b§c§r') and ($actionbar_text < '§b§c§s')) or (($actionbar_text > '§c§r') and ($actionbar_text < '§c§s')))"
+    },
+    "root_panel": {
+        "modifications": [
+            {
+                "array_name": "controls",
+                "operation": "insert_front",
+                "value": { 
+                    "bingo_card@hud.bingo_card": {}
+                }
+            }
+        ]
+    },
+    "bingo_card_items": {
+        "type": "image",
+        "size": [ "100%c + 1px", "100%c + 1px" ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "texture": "textures/ui/dark_bg",
+        "controls": [
+            {
+                "bingo_card_text": {
+                    "type": "label",
+                    "text_alignment": "center",
+                    "font_size": "small",
+                    "line_padding": 1,
+                    "offset": [ 0, 5 ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "color": "$tool_tip_text",
+                    "layer": 1,
+                    "text": "$actionbar_text",
+                    "localize": false
+                }
+            }
+        ]
+    },
+    "bingo_card_background": {
+        "type": "image",
+        "size": [ "100%c + 8px", "100%c + 8px" ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "texture": "textures/map/map_background",
+        "ignored": "(not (($actionbar_text > '§b§c§r') and ($actionbar_text < '§b§c§s')))",
+        "controls": [
+            { "bingo_card_items@hud.bingo_card_items": {} }
+        ]
+    },
+
+    "bingo_card": {
+        "type": "panel",
+        "size": [ "100%c", "100%c"],
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "offset": [ 0, 24],
+        "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": {
+                "hud_actionbar_text": "bingo_card_background@hud.bingo_card_background"
+            }
+        }
+    }
+}
