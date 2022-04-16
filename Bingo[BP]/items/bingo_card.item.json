@@ -1,0 +1,35 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "fond:bingo_card",
+            "category": "commands"
+        },
+        "components": {
+            "minecraft:max_stack_size": 1,
+            "minecraft:display_name": {
+                "value": "item.fond:bingo_card.name"
+            },
+            "minecraft:icon": {
+                "texture": "map_filled"
+                //, "frame": 0
+            },
+		        "minecraft:cooldown": {
+				        "category": "card",
+				        "duration": 1
+			      },
+            "minecraft:on_use": {
+                "on_use": { "event": "swing" }
+            }
+        },
+        "events": {
+            "swing": {
+                "swing": {},
+                "run_command": {
+                    "target": "holder",
+                    "command": "playsound item.book.page_turn @s"
+                }
+            }
+        }
+    }
+}
