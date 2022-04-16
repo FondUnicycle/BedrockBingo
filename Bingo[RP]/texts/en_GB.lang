@@ -1,0 +1,8 @@
+pack.name=MC Bingo[RP]
+pack.description=Resources for MC Bingo Add-On
+
+item.fond:bingo_card.name=Bingo Card
+
+item.itemLock.cantDrop=:hollow_star: Can't Drop Items can't be:
+item.itemLock.keepOnDeath=This item is not lost on death
+item.itemLock.popupNotice.cantDrop=:hollow_star: Can't Drop Items can't be: dropped, removed, crafted with
