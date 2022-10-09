@@ -4,36 +4,42 @@
         "authors": [ "FondUnicycle" ]
     },
     "header": {
-        "name": "Bedrock Bingo",
+        "name": "Bedrock Bingo 1.1.2 for 1.19.10",
         "description": "Play Bingo in Minecraft\n§oMade by§r §l§9FondUnicycle",
         "uuid": "5ad6d6a8-c46f-4d95-a681-21b65caedf5c",
-        "version": [ 1, 0, 0 ],
-        "min_engine_version": [ 1, 18, 10 ]
+        "version": [ 1, 1, 2 ],
+        "min_engine_version": [ 1, 19, 10 ]
     },
     "modules": [
         {
             "description": "Behaviors",
             "type": "data",
             "uuid": "d8d2d351-efb8-40e7-ba7d-96e7d66e66f1",
-            "version": [ 1, 0, 0 ]
+            "version": [ 1, 1, 2 ]
         },
         {
             "description": "Scripts",
-            "type": "javascript",
+            "language": "javascript",
+            "type": "script",
             "entry": "scripts/main.js",
             "uuid": "9952c1d0-55e5-4d52-9cff-5faea4620f98",
-            "version": [ 1, 0, 0 ]
+            "version": [ 1, 1, 2 ]
         }
     ],
     "dependencies": [
         {
             // Resource Pack
             "uuid": "f01c794a-cd2f-46b1-a31e-eaa7548dcdf2",
-            "version": [ 1, 0, 0 ]
+            "version": [ 1, 1, 2 ]
         },
         {
             // mojang-minecraft Module
             "uuid": "b26a4d4c-afdf-4690-88f8-931846312678",
+            "version": [ 0, 1, 0 ]
+        },
+        {
+            // mojang-minecraft-ui
+            "uuid": "2bd50a27-ab5f-4f40-a596-3641627c635e",
             "version": [ 0, 1, 0 ]
         }
     ]
