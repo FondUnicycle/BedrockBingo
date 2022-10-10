@@ -1,12 +1,11 @@
-import { EntityQueryOptions, GameMode, world } from 'mojang-minecraft';
+import { GameMode, world } from 'mojang-minecraft';
 import * as Game from './game.js';
 import * as BookUI from './ui_screens.js';
 
 const overworld = world.getDimension('overworld');
 let host;
 let hostSelected = false;
-const excludeJoinedPlayers = new EntityQueryOptions();
-      excludeJoinedPlayers.excludeTags = ['joined'];
+const excludeJoinedPlayers = { excludeTags: ['joined'] };
 
 
 world.events.itemUse.subscribe( itemUseData => {
@@ -56,9 +55,9 @@ world.events.tick.subscribe( tickData => {
         try {
             for (const player of [...world.getPlayers(excludeJoinedPlayers)]) {
                 player.runCommand('gamemode adventure');
+                player.addTag('joined');
                 player.runCommand('give @s fond:bingo_card 1 0 {"minecraft:keep_on_death":{},"minecraft:item_lock":{"mode":"lock_in_inventory"}}');
                 player.runCommand('give @s fond:info_book');
-                player.addTag('joined');
             }
         } catch {}
     }
