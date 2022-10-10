@@ -1,0 +1,23 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "fond:info_book",
+            "category": "commands"
+        },
+        "components": {
+            "minecraft:max_stack_size": 1,
+            "minecraft:display_name": {
+                "value": "item.fond:info_book.name"
+            },
+            "minecraft:icon": {
+                "texture": "book_portfolio"
+            },
+            "minecraft:cooldown": {
+                "category": "card",
+                "duration": 1
+            }
+        },
+        "events": {}
+    }
+}
