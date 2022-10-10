@@ -8,7 +8,7 @@
         "description": "Play Bingo in Minecraft\n§oMade by§r §l§9FondUnicycle",
         "uuid": "5ad6d6a8-c46f-4d95-a681-21b65caedf5c",
         "version": [ 1, 1, 2 ],
-        "min_engine_version": [ 1, 19, 10 ]
+        "min_engine_version": [ 1, 19, 31 ]
     },
     "modules": [
         {
