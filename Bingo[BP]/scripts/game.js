@@ -164,7 +164,8 @@ export function gameLoop(tick) {
     else if( tick % ticksPerRun == 0 ) {
         if(celebrationCounter == 2) {
             // Show title
-            overworld.runCommand(`title @a title §6${winner.nameTag} got BINGO!!`);
+            overworld.runCommand(`title @a title §6${winner.nameTag}`);
+            overworld.runCommand(`title @a subtitle §6got BINGO!!`);
             // Play challenge sound
             overworld.runCommand('playsound bingo.win @a');
         }
