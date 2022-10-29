@@ -1,4 +1,4 @@
-import { ActionFormData, ModalFormData } from 'mojang-minecraft-ui';
+import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
 import { setGameMode, setUpGame, winnerFound } from './game.js';
 import { setCardDifficulty } from './card.js';
 
@@ -72,7 +72,7 @@ function infoScreen(player) {
         .button('Bingo Card', 'textures/ui/icon_map')
         .button('Card Difficulties', 'textures/ui/Ping_Green')
         .button('Game Modes', 'textures/ui/item_container_transfer_mode')
-        .button('How the game works', 'textures/ui/missing_item')
+        .button('How the game works', 'textures/ui/how_to_play_button_default_light')
         .button('Back to Main Menu', 'textures/ui/icon_book_writable');
     infoScreen.show(player)
         .then(response => {

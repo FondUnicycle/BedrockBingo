@@ -48,6 +48,9 @@ export class Card {
         this.flowerCounter;
     }
     
+    /**
+     * @returns {string[]} The generated Card array
+     */
     genCard() {
         this.resetCounters();
         const selections = new Set();
@@ -89,6 +92,11 @@ export class Card {
         this.flowerCounter = maxFlowers;
     }
 
+    /**
+     * Checks if the selected item can be added to the generated Card
+     * @param {string|object} item The item ID and optional Data Value
+     * @returns {boolean} Wether or not the item can be added to generated Card
+     */
     canAddItem(item) {
 		if (item?.id == 'minecraft:bed') {
 			if (this.bedCounter == 0) return false;
@@ -178,20 +186,31 @@ export class Card {
         // {"rawtext":[{"text":"§b§c§r"},{"text":"00000\n\n\n"},{"text":"00000\n\n\n"},{"text":"00000\n\n\n"},{"text":"00000\n\n\n"},{"text":"00000\n\n\n"}]}
     }
 
+    /**
+     * Displays the Card on screen
+     * @param {boolean} show Wether or not the Card will be shown
+     */
     display(show) {
         if(show) {
-            this.player.runCommand(`titleraw @s actionbar ${JSON.stringify(this.rawtextObj)}`);
+            this.player.runCommandAsync(`titleraw @s actionbar ${JSON.stringify(this.rawtextObj)}`);
             this.isDisplaying = true;
         }
         else {
-            this.player.runCommand('titleraw @s actionbar {\"rawtext\": [{\"text\": \"§c§r \"}]}');
+            this.player.runCommandAsync('titleraw @s actionbar {\"rawtext\": [{\"text\": \"§c§r \"}]}');
             this.isDisplaying = false;
         }
         
     }
 
+    /**
+     * Updated the marked items on Card
+     * @param {number} row The row number
+     * @param {number} col The column number
+     */
     update(row, col) {
-        this.itemGrid[row][col] = cardMarker;
+        let cardItem = this.itemGrid[row][col];
+        let markedItem = String.fromCharCode(cardItem.charCodeAt() + 0x1000);
+        this.itemGrid[row][col] = markedItem;
         this.cardToText();
         this.display(this.isDisplaying);
     }
