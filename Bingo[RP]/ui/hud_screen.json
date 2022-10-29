@@ -87,7 +87,18 @@
         "size": [ "100%c", "100%c"],
         "anchor_from": "top_right",
         "anchor_to": "top_right",
-        "offset": [ 0, 24 ],
+        "$card_offset|default": [ 0, 24 ],
+        "offset": "$card_offset",
+        "variables": [
+            {
+                "requires": "$touch",
+                "$card_offset": [ -100, 0 ]
+            },
+            {
+                "requires": "(not $touch)",
+                "$card_offset": [ 0, 24 ]
+            }
+        ],
         "factory": {
             "name": "hud_actionbar_text_factory",
             "control_ids": {
