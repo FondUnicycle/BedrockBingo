@@ -4,18 +4,18 @@
         "authors": [ "FondUnicycle" ]
     },
     "header": {
-        "name": "Bedrock Bingo[RP] 1.1.4 for 1.19.40",
+        "name": "Bedrock Bingo[RP] 1.1.5 for 1.19.50",
         "description": "Resources for Bedrock Bingo Add-On\n§oMade by§r §l§9FondUnicycle",
         "uuid": "f01c794a-cd2f-46b1-a31e-eaa7548dcdf2",
-        "version": [ 1, 1, 4 ],
-        "min_engine_version": [ 1, 19, 40 ]
+        "version": [ 1, 1, 5 ],
+        "min_engine_version": [ 1, 19, 50 ]
     },
     "modules": [
         {
             "description": "Resources",
             "type": "resources",
             "uuid": "6d0c6a29-c58d-4757-aa7a-c0d34369e331",
-            "version": [ 1, 1, 4 ]
+            "version": [ 1, 1, 5 ]
         }
     ]
 }
